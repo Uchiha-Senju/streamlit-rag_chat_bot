@@ -1,0 +1,7 @@
+ollama
+chromadb
+streamlit
+pprintpp
+langchain
+langchain_community
+pypdf 
