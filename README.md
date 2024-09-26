@@ -10,3 +10,5 @@ docker build . -f rag_bot.Dockerfile -t rag_bot/v1
 docker run -p 8501:8501 rag_bot/v1
 ```
 - Open the app in a browser by going to `https://localhost:8501`
+
+This runs the LLMs locally, so either have GPUs or be prepared to wait.
