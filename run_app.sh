@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Spin up ollama
 ollama serve >/dev/null 2>&1 &
 # Run the app
