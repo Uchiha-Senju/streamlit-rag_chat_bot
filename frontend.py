@@ -121,20 +121,20 @@ if 'processed_docs' not in st.session_state :
 col1, col2 = st.columns((1,2))
 
 with col1 :
-  with st.expander("Input the Knowledge base"):
-    documents = st.file_uploader(
-      label="File Input",
-      type='pdf', 
-      accept_multiple_files=True,
-    )
-    # def process_uploaded_file() :
-    if len(documents) != 0 :
-      un_processed_docs = [x for x in documents if x.name not in st.session_state.processed_docs]
-      with st.spinner("Embedding Docs") :
-        add_pdf_file_to_collection_from_blob(un_processed_docs, collection, embed_model)
-        print("Processed", un_processed_docs)
-      for f in un_processed_docs :
-        st.session_state.processed_docs.append(f.name)
+  # with st.expander("Input the Knowledge base"):
+  documents = st.file_uploader(
+    label="Input the Knowledge base",
+    type='pdf', 
+    accept_multiple_files=True,
+  )
+  # def process_uploaded_file() :
+  if len(documents) != 0 :
+    un_processed_docs = [x for x in documents if x.name not in st.session_state.processed_docs]
+    with st.spinner("Embedding Docs") :
+      add_pdf_file_to_collection_from_blob(un_processed_docs, collection, embed_model)
+      print("Processed", un_processed_docs)
+    for f in un_processed_docs :
+      st.session_state.processed_docs.append(f.name)
 
 # I hate Steamlit
 # Initialize chat history
