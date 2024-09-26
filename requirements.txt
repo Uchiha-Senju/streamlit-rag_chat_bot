@@ -1,6 +1,7 @@
 ollama
 chromadb
 streamlit
+stqdm
 pprintpp
 langchain
 langchain_community
