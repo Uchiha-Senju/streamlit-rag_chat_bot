@@ -2,7 +2,7 @@
 
 - Build the docker image using 
 ```bash
-curl -o rag_bot.Dockerfile 
+curl -o rag_bot.Dockerfile https://raw.githubusercontent.com/Uchiha-Senju/streamlit-rag_chat_bot/refs/heads/main/rag_bot.Dockerfile
 docker build . -f rag_bot.Dockerfile -t rag_bot/v1
 ```
 - Run the container using
